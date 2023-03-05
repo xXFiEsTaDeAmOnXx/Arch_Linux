@@ -10,8 +10,7 @@ These are some Features I use:
  - grub bootloader
  - envy control
  - rsync to backup the efi partion
- - zram
-
+ 
 Display Manager and Desktop Environment 
 =======================================
 I use gdm as display manager with gnome as desktop environment. As window manager i typically use wayland, eventhough I sometimes need to switch x11, because of my nvidia grafics.
