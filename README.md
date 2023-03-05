@@ -2,10 +2,12 @@
 
 This repository includes the [instruction](install.sh) to install my arch linux setup.
 
-These are some Features i use:
-=============================
+These are some Features I use:
+==============================
  - Btrfs
- - snapper
+ - snapper for snapshots
+ - multiple kernels
+ - grub bootloader
  - envy control
  - rsync to backup the efi partion
  - zram
