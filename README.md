@@ -1,4 +1,4 @@
-#Arch Linux
+# My Arch Linux installation script
 
 This repository includes the [instruction](install.sh) to install my arch linux setup.
 
