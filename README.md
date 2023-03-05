@@ -13,4 +13,8 @@ These are some Features I use:
  
 Display Manager and Desktop Environment 
 =======================================
-I use gdm as display manager with gnome as desktop environment. As window manager i typically use wayland, eventhough I sometimes need to switch x11, because of my nvidia grafics.
+I use gdm as display manager with gnome as desktop environment. As window manager i typically use wayland, eventhough I sometimes need to switch x11, because of my nvidia graphics.
+
+Themes
+======
+I try to use the darcular theme in all my applications.
