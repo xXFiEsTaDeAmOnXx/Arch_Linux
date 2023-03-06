@@ -298,7 +298,7 @@ gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 
 
-#Darcular icons
+##Darcular icons
 git clone https://github.com/m4thewz/dracula-icons.git
 
 mv dracula-icons Darcular
@@ -307,7 +307,11 @@ cp Darcular usr/share/icons/
 
 gsettings set org.gnome.desktop.interface icon-theme "Dracula"
 
+##Darcular Mailspring
 
+git clone https://github.com/dracula/mailspring.git
+
+#And set it via Edit > Change Theme...
 
 ##Insall plymouth
 
