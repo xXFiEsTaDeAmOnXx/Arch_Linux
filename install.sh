@@ -244,12 +244,9 @@ yay -S --needed < pkglist_aur.txt  #conntent is attached in GitHub
 
 sudo pacman -S flatpak
 
-##Install Spotify
+##Install Flatpack Applications
 
-flatpak install flathub com.spotify.Client
-
-##Install Gnome Extension Manager
-flatpak install flathub com.mattjakeman.ExtensionManager
+xargs flatpak install -y < flatpaks.txt
 
 
 
