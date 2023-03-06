@@ -284,27 +284,27 @@ mv dracula.xml $HOME/.local/share/gedit/styles/
 #Activate in Gedit's preferences dialog
 
 
-#Darcular gkt theme
+#Dracula gkt theme
 git clone https://github.com/dracula/gtk.git
 
-mv gtk Darcular
+mv gtk Dracula
 
-cp Darcular  /usr/share/themes/ 
+cp Dracular  /usr/share/themes/ 
 
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 
 
-##Darcular icons
+##Dracula icons
 git clone https://github.com/m4thewz/dracula-icons.git
 
-mv dracula-icons Darcular
+mv dracula-icons Dracula
 
-cp Darcular usr/share/icons/
+cp Dracula usr/share/icons/
 
 gsettings set org.gnome.desktop.interface icon-theme "Dracula"
 
-##Darcular Mailspring
+##Dracula Mailspring
 
 git clone https://github.com/dracula/mailspring.git
 
@@ -315,17 +315,17 @@ git clone https://github.com/dracula/mailspring.git
 mkdir ~/.themes
 mkdir ~/.icons
 
-cp -r /usr/share/themes/Darcula/ ~/.themes/ ##copy from usr/share to home, so flatpak can acces it (/usr/shrare is blacklisted)
-cp -r /usr/share/icons/Darcula/ ~/.icons/
+cp -r /usr/share/themes/Dracula/ ~/.themes/ ##copy from usr/share to home, so flatpak can acces it (/usr/shrare is blacklisted)
+cp -r /usr/share/icons/Dracula/ ~/.icons/
 
 #Inside Flatseal 
 
     #enable the paths under all application settings
-        #1. add path: ~/themes under other file section
-        #2. add path: ~/icons under other file section
+        #1. add path: ~/.themes under other file section
+        #2. add path: ~/.icons under other file section
     #add environment variables under all application settings
-        #1 add line: ICON_THEME=Darcula
-        #2 add line: GTK_THEME=Darcula
+        #1 add line: ICON_THEME=Dracula
+        #2 add line: GTK_THEME=Dracula
 
 ##Insall plymouth
 
