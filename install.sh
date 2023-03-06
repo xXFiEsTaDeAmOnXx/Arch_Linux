@@ -327,6 +327,11 @@ cp -r /usr/share/icons/Dracula/ ~/.icons/
         #1 add line: ICON_THEME=Dracula
         #2 add line: GTK_THEME=Dracula
 
+#Force GTK theme by setting a envoriment variable
+
+sudo bash -c "echo "GTK_THEME=Darcula" >> /etc/environment"
+
+
 ##Insall plymouth
 
 yay -S plymouth
