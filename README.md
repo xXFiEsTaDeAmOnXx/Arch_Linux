@@ -10,6 +10,7 @@ These are some Features I use:
  - grub bootloader
  - envy control
  - rsync to backup the efi partion
+ - flatpak
  - zswap instead of zram
  
 Display Manager and Desktop Environment 
