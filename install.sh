@@ -310,6 +310,23 @@ git clone https://github.com/dracula/mailspring.git
 
 #And set it via Edit > Change Theme...
 
+##Enable GTK Theme for flatpak and use Darcula theme
+
+mkdir ~/.themes
+mkdir ~/.icons
+
+cp -r /usr/share/themes/Darcula/ ~/.themes/ ##copy from usr/share to home, so flatpak can acces it (/usr/shrare is blacklisted)
+cp -r /usr/share/icons/Darcula/ ~/.icons/
+
+#Inside Flatseal 
+
+    #enable the paths under all application settings
+        #1. add path: ~/themes under other file section
+        #2. add path: ~/icons under other file section
+    #add environment variables under all application settings
+        #1 add line: ICON_THEME=Darcula
+        #2 add line: GTK_THEME=Darcula
+
 ##Insall plymouth
 
 yay -S plymouth
