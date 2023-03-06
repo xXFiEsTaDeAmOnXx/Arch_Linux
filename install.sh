@@ -457,3 +457,8 @@ sudo pacman -S docker
 sudo usermod -aG docker $USER
 
 sudo pacman -S docker-compose
+
+##Configure Pacman
+sudo vim /etc/pacman.conf #file is in GitHUB
+
+#Uncomment #Color, #ParalellDownloads=5 and add ILoveCandy after Color
