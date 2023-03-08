@@ -2,6 +2,11 @@
 # ~/.bashrc
 #
 
+### Export
+export EDITOR=vim
+export VISUAL=vim
+export HISTCONTROL=ignoreboth #remove duplicate commands in history
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -68,6 +73,12 @@ alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
 
 
 # Colorize grep output (good for log files)
