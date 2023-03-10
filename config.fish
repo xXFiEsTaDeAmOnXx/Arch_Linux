@@ -1,63 +1,71 @@
-#
-# ~/.bashrc
-#
-
 ### Export
-export EDITOR=vim
-export VISUAL=vim
-export HISTCONTROL=ignoreboth #remove duplicate commands in history
+set fish_greeting # Supresses fish's intro message
+set EDITOR "vim" #set Editor to vim
+set VISUAL "vim"
+set HISTCONTROL "ignoreboth" #remove duplicate commands in history
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-PS1='[\u@\h \W]\$ '
-
-# Bash Function To Extract File Archives Of Various Types
-ex() {
-     if [ -f $1 ] ; then
-         case $1 in
-             *.tar.bz2)   tar xjf $1     ;;
-             *.tar.gz)    tar xzf $1     ;;
-             *.bz2)       bunzip2 $1     ;;
-             *.rar)       rar x $1       ;;
-             *.gz)        gunzip $1      ;;
-             *.tar)       tar xf $1      ;;
-             *.tbz2)      tar xjf $1     ;;
-             *.tgz)       tar xzf $1     ;;
-             *.zip)       unzip $1       ;;
-             *.Z)         uncompress $1  ;;
-             *.7z)        7z x $1    ;;
-             *)           echo "'$1' cannot be extracted via ex()" ;;
-         esac
+function ex
+     if [ -f $argv ]
+         switch $argv[1]
+            case "*.tar.bz2"
+                tar xjf $argv[1];;
+             case "*.tar.gz"    
+                tar xzf $argv[1];;
+             case "*.bz2"      
+                bunzip2 $argv[1];;
+             case "*.rar"       
+                rar x $argv[1];;
+            case "*.rar"       
+                rar x $argv[1];;
+            case "*.gz"       
+                gunzip $argv[1];;
+            case "*.tar"       
+                tar xf $argv[1];;
+            case "*.tar"
+                tar xjf $argv[1];;
+            case "*.tbz2"
+                tar xzf $argv[1];;
+            case "*.zip"
+                 unzip $argv[1];;
+            case "*.Z"
+                  uncompress $argv[1];;
+            case "*.zip"
+                 unzip $argv[1];;
+            case "*.7z"
+                 7z x $argv[1];;
+            case "*"
+             echo "'$argv[1]' cannot be extracted via ex()" ;;  
+        
+         end
      else
          echo "'$1' is not a valid file"
-     fi
-}
+    end
+end
 
 
 # navigation function to go n directories up
-up () {
-  local d=""
-  local limit="$1"
+function up
+  	set -l d ""
+  	set -l limit $argv[1]
+    echo $limit
+ 	 # Default to limit of 1
+  	if [ -z "$limit" ] || [ "$limit" -le 0 ]
+    		set  limit 1
+	end
 
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
+  	for i in (seq 0 $limit)
+    		set d  "../$d"
+  	end
 
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
+    echo $d
 
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
-}
+  	# perform cd. Show error if cd fails
+  	if ! cd "$d"
+    		echo "Couldn't go up $limit dirs.";
+  	end
+end
 
 ### ALIASES ###
-
-
 
 # Changing "ls" to "exa"
 alias ls='exa -al  --color=always --group-directories-first' # my preferred listing
@@ -101,5 +109,7 @@ alias newtag='git tag -a'
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
+neofetch
+starship init fish | source
 
-exec fish
+
