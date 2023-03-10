@@ -485,3 +485,9 @@ sudo pacman -S docker-compose
 sudo vim /etc/pacman.conf #file is in GitHUB
 
 #Uncomment #Color, #ParalellDownloads=5 and add ILoveCandy after Color
+
+##Configure Fish
+sudo pacman -S fish
+cp config.fish ~/.config/fish/config.fish #file on GitHub
+
+
