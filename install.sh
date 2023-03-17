@@ -65,6 +65,8 @@ mount -o noatime,compress=lzo,space_cache=v2,subvol=/@snapshots /dev/sda3 /mnt/.
 
 mount -o noatime,compress=lzo,space_cache=v2,subvol=/@var_log /dev/sda3 /mnt/var/log
 
+mount /dev/sda1 /mnt/boot
+
 pacstrap /mnt base linux linux-firmware vim intel-ucode
 
 genfstab -U /mnt/etc/fstab #mount partitions on boot
