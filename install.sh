@@ -492,4 +492,9 @@ sudo vim /etc/pacman.conf #file is in GitHUB
 sudo pacman -S fish
 cp config.fish ~/.config/fish/config.fish #file on GitHub
 
+# Configure terminator
+sudo pacman -S terminator
+cp terminator_config ~/.config/terminator/config
+ 
+
 
