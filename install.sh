@@ -496,5 +496,12 @@ cp config.fish ~/.config/fish/config.fish #file on GitHub
 sudo pacman -S terminator
 cp terminator_config ~/.config/terminator/config
  
+# Configure rclone for OneDrive
+
+rclone config
+
+mv rclonemount.service  ~/.config/systemd/user/  # configure systemd user service
+
+
 
 
