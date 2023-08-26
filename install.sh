@@ -500,8 +500,10 @@ cp terminator_config ~/.config/terminator/config
 
 rclone config
 
+mkdir -p  ~/.config/systemd/user/
+
 mv rclonemount.service  ~/.config/systemd/user/  # configure systemd user service
 
 
-
+systemctl enable --user rclonemount.service
 
